@@ -45,9 +45,9 @@ def DownloadVideo():
 
 
 root = Tk()
-root.title("YTD Downloader")
+root.title("Youtube Downloader")
 root.geometry("350x400") #set window
-root.columnconfigure(0,weight=1)#set all content in center.
+root.columnconfigure(0,weight=1)
 
 #Ytd Link Label
 ytdLabel = Label(root,text="Enter the URL of the Video",font=("jost",15))
@@ -59,7 +59,7 @@ ytdEntry = Entry(root,width=50,textvariable=ytdEntryVar)
 ytdEntry.grid()
 
 #Error Msg
-ytdError = Label(root,text="Error Msg",fg="red",font=("jost",10))
+ytdError = Label(root,text="Message",fg="red",font=("jost",10))
 ytdError.grid()
 
 #Asking save file label
@@ -71,7 +71,7 @@ saveEntry = Button(root,width=10,bg="red",fg="white",text="Choose Path",command=
 saveEntry.grid()
 
 #Error Msg location
-locationError = Label(root,text="Error Msg of Path",fg="red",font=("jost",10))
+locationError = Label(root,text="Message", fg="red",font=("jost",10))
 locationError.grid()
 
 #Download Quality
@@ -84,10 +84,10 @@ ytdchoices = ttk.Combobox(root,values=choices)
 ytdchoices.grid()
 
 #donwload btn
-downloadbtn = Button(root,text="Donwload",width=10,bg="red",fg="white",command=DownloadVideo)
+downloadbtn = Button(root, text="Download",width=10,bg="red",fg="white",command=DownloadVideo)
 downloadbtn.grid()
 
 #developer Label
-developerlabel = Label(root,text="Dream Developers",font=("jost",15))
+developerlabel = Label(root, text="My Youtube downloader", font=("jost",15))
 developerlabel.grid()
 root.mainloop()
